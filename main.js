@@ -11,7 +11,6 @@ function drop(event) {
   var data = event.dataTransfer.getData("text");
   event.target.appendChild(document.getElementById(data));
 }
-
 function resetGame() {
   // Clear the content of each dropbox on the board
   const dropboxes = document.getElementsByClassName("dropbox");
@@ -19,12 +18,11 @@ function resetGame() {
     dropboxes[i].innerHTML = "";
   }
 
-  // Move the cross and circle elements back to the drag container
-  const dragContainer = document.querySelector(".drag");
-  const dragElements = document.querySelectorAll(".dragbox");
-  dragElements.forEach((element) => {
-    dragContainer.appendChild(element);
-  });
+  // Reset any game-related variables or states as needed
+
+  // Show the player choice options again if necessary
+  const playerChoice = document.getElementById("player-choice");
+  playerChoice.style.display = "block";
 }
 
 // Get the reset button element
